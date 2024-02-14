@@ -2,7 +2,6 @@ package web.dao;
 
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import web.entity.User;
 
 import javax.persistence.EntityManager;
@@ -16,7 +15,6 @@ public class UserDaoImpl implements UserDao{
     private EntityManager entityManager;
 
     @Override
-    @Transactional(readOnly = true)
     public List<User> getAllUser() {
         return entityManager.createQuery("from User", User.class).getResultList();
     }
