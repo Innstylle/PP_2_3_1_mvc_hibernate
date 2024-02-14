@@ -7,26 +7,23 @@
   <version>1.0-SNAPSHOT</version>
   <name>PP_2_3_1_mvc_hibernate Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+  <properties>
+    <spring.version>5.3.14</spring.version>
+  </properties>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+  <dependencies>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>6.1.3</version>
+      <version>${spring.version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
-      <version>6.1.3</version>
+      <version>5.3.14</version>
     </dependency>
 
 
@@ -46,11 +43,10 @@
     </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
     <dependency>
-      <groupId>org.hibernate.orm</groupId>
+      <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>6.4.4.Final</version>
+      <version>5.6.3.Final</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
@@ -71,6 +67,12 @@
       <groupId>org.thymeleaf</groupId>
       <artifactId>thymeleaf-spring5</artifactId>
       <version>3.0.14.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+      <version>1.0.2.Final</version>
     </dependency>
 
 
