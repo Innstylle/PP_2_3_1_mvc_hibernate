@@ -46,6 +46,7 @@ public class AppConfig {
         em.setPackagesToScan("web.entity");
 
         Properties props = new Properties();
+        props.setProperty("hibernate.connection.CharSet", "utf8");
         props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
         props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 
